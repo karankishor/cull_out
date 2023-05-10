@@ -1,0 +1,23 @@
+
+.inpur__box{
+    width: 100%;
+    background-color: navy;
+    padding: .5rem;
+    border-radius: .2rem;
+}
+
+.input__box input{
+    background-color:  rgb(19, 3, 13);
+    border: 0;
+    width: 100%;
+    outline: none;
+    padding-inline: .5rem;
+    color : #d9caca;
+}
+
+.input__box input::placeholder{
+    color: rgb(204, 184, 184);
+    font-weight: 500;
+    text-transform: capitalize;
+
+}

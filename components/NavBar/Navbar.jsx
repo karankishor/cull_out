@@ -1,11 +1,10 @@
 import React from 'react'
 
-const allowdVoters = () => {
+const Navbar = () => {
   return (
     <div>
-      
     </div>
   )
 }
 
-export default allowdVoters;
+export default Navbar

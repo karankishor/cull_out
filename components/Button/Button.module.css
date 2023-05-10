@@ -1,0 +1,17 @@
+
+.button{
+    margin-bottom: 2rem;
+    background-color: skyblue;
+    border: 1px dottd darkblue;
+    padding: .5rem 1rem;
+    color: blueviolet;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all .4 ease-in-out;
+}
+
+.button:hover{
+    background-color: gray;
+    color:black;
+    
+}
