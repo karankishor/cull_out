@@ -21,7 +21,7 @@ const allowedVoters = () => {
   });
   
   const router = useRouter();
-  const {uploadToIPFS} = useContext(VotingContext);
+  const {uploadToIPFS, createVoter} = useContext(VotingContext);
 
   ///.........Voters Image Drop
 
@@ -35,7 +35,7 @@ const allowedVoters = () => {
     accept: "image/*",
     maxSize: 5000000,
   });
-
+ 
 
   // __ JSX Part
   return( <div className={Style.createVoter}>
@@ -100,7 +100,7 @@ const allowedVoters = () => {
                   <p>Upload File: JPG, PNG, GIF, WEBM Max 10MB</p>
 
               <div className={Style.voter__container__box__div__image}>
-                <Image src={images.creator} width={150} height={150} objectFit='contain' alt='File upload'/>
+                <Image src={images.upload} width={150} height={150} objectFit='contain' alt='File upload'/>
               </div>
               <p>Drag & Drop File</p>
               <p>or Browse Media on your device</p>
@@ -128,7 +128,7 @@ const allowedVoters = () => {
           setFormInput({ ...formInput, position: e.target.value})}/>
 
           <div className={Style.Button}>
-            <Button btnName="Authorized Voter" handleClick={()=> {}}/>
+            <Button btnName="Authorized Voter" handleClick={()=> createVoter(formInput, fileUrl, router)}/>
           </div>
        </div>
     </div>
@@ -138,7 +138,7 @@ const allowedVoters = () => {
       <div className={Style.createdVoter__info}>
        < Image src={images.creator} alt="user Profile" />
        <p>Notice For User</p>
-       <p>Organizer <span>0x939939..</span></p>
+       <p>Organizer <span>0x9399399339</span></p>
        <p>
         Only organizer of the voting contract can create voter and candidate  for voting election
        </p>

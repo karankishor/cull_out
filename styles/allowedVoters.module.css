@@ -18,7 +18,8 @@
     height:15rem;
     padding: 1rem;
     background-color: #231E39;
-    border-shadow: 10px 10px 15px rgba(0,0,0,0.35);
+    border-radius: 10px 10px 15px rgba(0,0,0,0.35) ;
+    box-shadow: 10px 10px 15px rgba(0,0,0,0.35);
     color: #b3b8cd;
     text-align: start;
 }
@@ -71,7 +72,7 @@
 
 /* ///////////user list */
 
-.createdVoter{
+.createdVoter__info{
     background-color: #231E39;
     border-radius: 25px;
     box-shadow: 10px 10px 15px rgba(0,0,0,0.35);
@@ -91,22 +92,24 @@
 }
 
 .voter{
-    background-color:black;
+    background-color: #231E39;
     border-radius: 25px;
     box-shadow: 10px 10px 15px rgba(0,0,0,0.35);
     color: #b3b8cd;
     padding: 2rem;
 }
 
-.voter__cantainer__box{
+.voter__container__box{
     text-align: center;
-    border: 1px dotted plum;
-    border-radius: 1px;
+    border: 1px dotted #9a02ac;
+    border-radius: 5px;
 }
 
-.voter__catainer_box p {
+.voter__container_box p {
    line-height:  .5s;
 }
+
+/* INPUT */
 
 .input__container{
     padding-top: 2rem;
@@ -132,7 +135,9 @@
     }
     .input__container{
         width: 100%;
+        
     }
+    
     .voterInfo{
         width: 12rem;
         height: 12rem;
