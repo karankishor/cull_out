@@ -88,7 +88,7 @@
 /* ///////////user list */
 
 .createdVoter__info{
-    background-color: #231E39;
+    background-color: #231e39a8;
     border-radius: 25px;
     box-shadow: 10px 10px 15px rgba(0,0,0,0.35);
     color:#b3b8cd;
@@ -97,7 +97,7 @@
 
 .card_box{
     line-height: 1;
-    border: 1px solid #9a02ac;
+    border: 1px solid #9b02ac;
     padding: .2rem;
     box-shadow: 10px 10px 15px rgba(0,0,0,0.35);
     border-radius: .3rem;
@@ -107,7 +107,7 @@
 }
 
 .voter{
-    background-color: #231E39;
+    background-color: #231e39cc;
     border-radius: 25px;
     box-shadow: 10px 10px 15px rgba(0,0,0,0.35);
     color: #b3b8cd;
@@ -116,7 +116,7 @@
 
 .voter__container__box{
     text-align: center;
-    border: 1px dotted #9a02ac;
+    border: 1px dotted #9b02ac;
     border-radius: 5px;
 }
 
