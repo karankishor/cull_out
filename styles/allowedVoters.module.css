@@ -17,7 +17,7 @@
     width:15rem;
     height:15rem;
     padding: 1rem;
-    background-color: #231E39;
+    background-color: #231e3992;
     border-radius: 10px 10px 15px rgba(0,0,0,0.35) ;
     box-shadow: 10px 10px 15px rgba(0,0,0,0.35);
     color: #b3b8cd;
@@ -31,7 +31,7 @@
 }
 
 .voterInfo_paragraph{
-    background-color: #231E39;
+    background-color: #28223fc5;
     border-radius: 25px;
     box-shadow: 10px 10px 15px rgba(0,0,0,0.35);
     color: #b3b8cd;
@@ -40,25 +40,40 @@
 }
 .voterInfo_paragraph p {
     line-height: 1rem;
+    color: #000000;
+    text-align: center;
 }
 
 .sideInfo{
-    background-color: #231E39;
+    background-color: #231e39ad;
     padding: .5rem 1rem;
     border-radius: 1rem;
-    color: #b3b8cd;
+    color: #000000;
 }
 
 .sideInfo_box h4{
-    background-color:#9a02ac;
+    background-color:#b09bb3;
     padding: .5rem;
-    border-radius: .2rem;
+    border-radius: 8px;
+    color: black;
+    text-align: center;
+    font-weight: bold;
+}
+
+.sideInfo_box p{
+    color: black;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: .8rem;
 }
 
 .sideInfo_para{
-    background-color:#9a02ac;
+    background-color:#b09bb3;
     padding: .5rem;
-    border-radius: .2rem;
+    border-radius:8px;
+    color: #000000;
+    font-weight: bold;
+    text-align: center;
 }
 .card{
     display: grid;

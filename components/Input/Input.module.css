@@ -1,22 +1,22 @@
 
 .inpur__box{
     width: 100%;
-    background-color: #730283;
+    background-color: #c7c3c7;
     padding: .5rem;
     border-radius: .2rem;
 }
 
 .input__box input{
-    background-color:  transparent;
+    background-color:  rgb(4, 8, 15);
     border: 0;
-    width: 100%;
+    width: 100%;  
     outline: none;
     padding-inline: .5rem;
-    color : #fff;
+    color : #efeeee;
 }  
 
 .input__box input::placeholder{
-    color: #2d0036;
+    color: #897f7f;
     font-weight: 500;
     text-transform: capitalize;
 

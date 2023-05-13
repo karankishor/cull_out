@@ -9,7 +9,20 @@ import {useRouter} from "next/router";
 
 import { VotingAddress, VotingAddressABI } from "./constants";
 
-const client  = ipfsHttpClient('https://ipfs.infura.io:5001/api/v0')
+// const client  = ipfsHttpClient('https://ipfs.infura.io:5001/api/v0/');
+const projectId = '2PizfJHh6a8khExDdTLbSQxkjlA';
+const projectSecret = 'dd1b7cd8d7f51afd9931bc1f1364184f';
+const auth = 'Basic ' + Buffer.from(projectId + ":" + projectSecret).toString('base64')
+
+const client = ipfsHttpClient({
+   host:'ipfs.infura.io',
+   port: 5001,
+   protocol:"https",
+   headers: {
+      authorization: auth,
+   },
+});   
+
 
 const fetchContract = (signerOrProvider) => 
 new ethers.Contract(VotingAddress, VotingAddressABI, signerOrProvider);
@@ -28,7 +41,7 @@ new ethers.Contract(VotingAddress, VotingAddressABI, signerOrProvider);
  // ..........END OF CANDIDATE DATA......... 
 
  const [error, setError] = useState(''); 
- const higestVote = [];
+ const higestVote = []; 
 
 
  //>>>>>>>>Voter Section
@@ -62,18 +75,22 @@ new ethers.Contract(VotingAddress, VotingAddressABI, signerOrProvider);
    setCurrentAccount(account[0])
  };
 
- ///--- UPLOAD TO IPFS VOTER IMAGE
+//  /--- UPLOAD TO IPFS VOTER IMAGE;
 
  const uploadToIPFS = async(file)=>{
    try{
       const added = await client.add({content: file});
+      // const added = await client.add(file);
 
-      const url = `https://ipfs.infura.io/ipfs/${added.path}`;
+      const url = `https://cullout.infura-ipfs.io/ipfs/${added.cid.toString()}`;
+      // const url = `https://cullout.infura-ipfs.io/ipfs/${added.path}`;
       return url;
    }catch(error){
       setError("Error Uploading file to IPFS")
    }
  };
+
+
 
  /// -----------Create Voter
 
@@ -94,8 +111,13 @@ new ethers.Contract(VotingAddress, VotingAddressABI, signerOrProvider);
       const data = JSON.stringify({name, address, position, image:fileUrl});
       const added = await client.add(data);
 
-      const url = `https://ipfs.infura.io/ipfs/${added.path}`;
-      console.log(url); 
+      const url = `https://cullout.infura-ipfs.io/ipfs/${added.cid.toString()}`;
+      const voter = await contract.voterRigtht(address, name, url, fileUrl);
+      voter.wait()
+
+      console.log(voterAddress)
+
+      // router.push("/voterList");
    } catch (error){
       setError("Error in creating voter")
    }
