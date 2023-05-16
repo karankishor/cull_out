@@ -9,7 +9,7 @@ import {useRouter} from "next/router";
 
 import { VotingAddress, VotingAddressABI } from "./constants";
 
-// const client  = ipfsHttpClient('https://ipfs.infura.io:5001/api/v0/');
+
 const projectId = '2PizfJHh6a8khExDdTLbSQxkjlA';
 const projectSecret = 'dd1b7cd8d7f51afd9931bc1f1364184f';
 const auth = 'Basic ' + Buffer.from(projectId + ":" + projectSecret).toString('base64')
@@ -83,7 +83,7 @@ new ethers.Contract(VotingAddress, VotingAddressABI, signerOrProvider);
       // const added = await client.add(file);
 
       const url = `https://cullout.infura-ipfs.io/ipfs/${added.cid.toString()}`;
-      // const url = `https://cullout.infura-ipfs.io/ipfs/${added.path}`;
+
       return url;
    }catch(error){
       setError("Error Uploading file to IPFS")
