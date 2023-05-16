@@ -21,7 +21,7 @@ const allowedVoters = () => {
   });
 
   const router = useRouter();
-  const { uploadToIPFS, createVoter } = useContext(VotingContext);
+  const { uploadToIPFS, createVoter, voterArray, getAllVoterData } = useContext(VotingContext);
 
   ///.........Voters Image Drop
 
@@ -36,7 +36,10 @@ const allowedVoters = () => {
     maxSize: 5000000,
   });
 
-  // console.log(fileUrl); 
+  useEffect(()=> {
+    getAllVoterData();
+  },[]);
+
 
   // __ JSX Part
   return (<div className={Style.createVoter}>
@@ -70,19 +73,18 @@ const allowedVoters = () => {
               </p>
             </div>
             <div className={Style.card}>
-              {/* {voterArray.map((el,i)=> (
+              {voterArray.map((el,i)=> (
                   <div key={i + 1} className={Style.card_box}>
                     <div className={Style.image}>
-                      <img src="" alt="Profile Photo" />
+                      <img src={el[4]} alt="Profile Photo" />
                     </div>
 
                     <div className={Style.card_info}>
-                      <p>Name</p>
-                      <p>Address</p>
-                      <p>Details</p>
+                      <p>{el[1]}</p>
+                      <p>Address: {el[3].slice(0,10)}...</p>
                     </div>
                   </div>
-                ))} */}
+                ))}
             </div>
           </div>
         )
