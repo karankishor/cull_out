@@ -18,7 +18,7 @@ const client = ipfsHttpClient({
    host:'ipfs.infura.io',
    port: 5001,
    protocol:"https",
-   headers: {
+   headers: {  
       authorization: auth,
    },
 });   
@@ -84,7 +84,7 @@ new ethers.Contract(VotingAddress, VotingAddressABI, signerOrProvider);
 
       const url = `https://cullout.infura-ipfs.io/ipfs/${added.cid.toString()}`;
 
-      return url;
+      return url;  
    }catch(error){
       setError("Error Uploading file to IPFS")
    }
@@ -94,28 +94,30 @@ new ethers.Contract(VotingAddress, VotingAddressABI, signerOrProvider);
 
  /// -----------Create Voter
 
- const createVoter = async(formInput, fileUrl, router)=>{
+ const createVoter = async(formInput, fileUrl, router) =>{
    try{
       const {name, address, position} = formInput;
-      if(!name || !address || ! position)
-      return console.log("Input data is missing");
+
+      if(!name || !address || !position)
+      return setError("Input data is missing");
 
       // Connecting smart Contract..........
-      const web3Modal = new Web3Modal(); 
+      const web3Modal = new Web3Modal();  
       const connection = await web3Modal.connect();
       const provider = new ethers.providers.Web3Provider(connection);
       const signer = provider.getSigner();
       const contract = fetchContract(signer);
       
 
-      const data = JSON.stringify({name, address, position, image:fileUrl});
+      const data = JSON.stringify({name, address, position, image: fileUrl});
       const added = await client.add(data);
 
       const url = `https://cullout.infura-ipfs.io/ipfs/${added.cid.toString()}`;
-      const voter = await contract.voterRigtht(address, name, url, fileUrl);
+   
+      const voter = await contract.voterRight(address, name, url, fileUrl);
       voter.wait()
 
-      console.log(voterAddress)
+      console.log(voter);
 
       // router.push("/voterList");
    } catch (error){

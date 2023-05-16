@@ -36,7 +36,7 @@ const allowedVoters = () => {
     maxSize: 5000000,
   });
 
-  console.log(fileUrl);
+  // console.log(fileUrl); 
 
   // __ JSX Part
   return (<div className={Style.createVoter}>
