@@ -36,7 +36,7 @@ export const VotingProvider = ({ children }) => {
    const [candidateLength, setCandidateLength] = useState('');
    const pushCandidate = [];
    const candidateIndex = [];
-   const [candiateArray, setCandidateArray] = useState(pushCandidate)
+   const [candidateArray, setCandidateArray] = useState(pushCandidate)
 
    // ..........END OF CANDIDATE DATA......... 
 
@@ -284,7 +284,7 @@ export const VotingProvider = ({ children }) => {
             voterAddress,
             currentAccount,
             candidateLength,
-            candiateArray,
+            candidateArray,
             uploadToIPFSCandidate,
          }}>
          {children}
