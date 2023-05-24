@@ -45,10 +45,12 @@
 }
 
 .sideInfo{
-    background-color: #231e39ad;
+    /* background-color: #231e39ad; */
+    background: linear-gradient(rgb(21, 46, 56),rgb(84, 82, 82),rgb(45, 58, 70));
     padding: .5rem 1rem;
     border-radius: 1rem;
     color: #000000;
+    box-shadow: 10px 10px 15px rgb(0, 0, 0);
 }
 
 .sideInfo_box h4{
@@ -88,16 +90,17 @@
 /* ///////////user list */
 
 .createdVoter__info{
-    background-color: #231e39a8;
+    /* background-color: #231e39a8; */
+    background: linear-gradient(rgb(21, 46, 56),rgb(84, 82, 82),rgb(45, 58, 70));
     border-radius: 25px;
-    box-shadow: 10px 10px 15px rgba(0,0,0,0.35);
+    box-shadow: 10px 10px 15px rgb(0, 0, 0);
     color:#b3b8cd;
     padding: 2rem;
 }
 
 .card_box{
     line-height: 1;
-    border: 1px solid #9b02ac;
+    border: 1px solid #bc0101;
     padding: .2rem;
     box-shadow: 10px 10px 15px rgba(0,0,0,0.35);
     border-radius: .3rem;
@@ -107,16 +110,16 @@
 }
 
 .voter{
-    background-color: #231e39cc;
+    background: linear-gradient(rgb(21, 46, 56),rgb(84, 82, 82),rgb(45, 58, 70));
     border-radius: 25px;
-    box-shadow: 10px 10px 15px rgba(0,0,0,0.35);
-    color: #b3b8cd;
+    box-shadow: 10px 10px 15px rgba(42, 1, 1, 0.519);
+    color: #ffffff;
     padding: 2rem;
 }
 
 .voter__container__box{
     text-align: center;
-    border: 1px dotted #9b02ac;
+    border: 3px dotted #ac0202;
     border-radius: 5px;
 }
 

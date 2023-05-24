@@ -1,17 +1,19 @@
 
 .button{
-    margin: .5rem 0rem ;
+    margin: .5rem .5rem ;
     background-color: transparent;
-    border: 1px dottd #9a02ac;
+    border: 1px dottd #fb0404;
     padding: .5rem 1rem;
     color:  .5rem 1rem;
     cursor: pointer;
-    font-weight: 600;
+    font-weight: 700;
     transition: all .4 ease-in-out;
+    border-radius: .8rem;
 }
 
 .button:hover{
-    background-color: #9a02ac;
-    color: #231e39;
+    background-color: #5cdfeb;
+    color: #f90505;
+    font-weight:bolder;
     
 }
