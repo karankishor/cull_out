@@ -15,6 +15,8 @@
     outline: none;
     padding-inline: .5rem;
     color : #efeeee;
+    box-shadow: 15px 15px 15px rgba(19, 46, 46, 0.979);
+    border: .1rem solid rgb(182, 51, 51);
 }  
 
 .input__box input::placeholder{
