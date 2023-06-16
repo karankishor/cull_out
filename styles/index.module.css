@@ -14,9 +14,11 @@
 }
 
 .winner_info{
-    background-color: #231e39;
+    background: linear-gradient(rgb(21, 46, 56),rgb(84, 82, 82),rgb(45, 58, 70));
     padding: 1rem;
     border-radius: .2rem; 
+    border-radius: .8rem;
+    box-shadow: 10px 10px 15px rgba(95, 218, 91, 0.57);
     
     display: grid;
     grid-template-columns: repeat(2,1fr);
@@ -27,13 +29,16 @@
 
 
 .winner_message{
-    background-color: #231e39;
+    background: linear-gradient(rgb(21, 46, 56),rgb(84, 82, 82),rgb(45, 58, 70));
     padding: 2rem;
     border-radius: .2rem;
     font-size: 1.5rem;
     color: #b3b8cd;
     line-height: 0;
     position: relative;
+    border-radius: .8rem;
+    box-shadow: 8px 8px 8px rgba(240, 4, 4, 0.448);
+    
 
 }
 
@@ -46,9 +51,13 @@
 }
 
 .candidate_list{
-    background-color: #9a02ac;
+    /* background-color: #8aac02; */
+    background: linear-gradient(rgb(14, 31, 37),rgb(56, 54, 54),rgb(34, 44, 54));
     font-size: 1rem;
     padding: .1rem 1rem;
+    border-radius: .8rem;
+    box-shadow: 10px 10px 15px rgb(0, 0, 0);
+
 }
 
 .candidate_list p{
