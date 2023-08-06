@@ -179,14 +179,24 @@ export const VotingProvider = ({ children }) => {
 
    };
 
-   // useEffect(() => {
-   //    getAllVoterData();
-   // }, []);
+   useEffect(() => {
+      getAllVoterData();
+   }, []);
 
    /// ======= GIVE VOTE
    const giveVote = async(id) => {
       try {
-
+         const voterAddress = id.address;
+         const voterId= id.id;
+         // Connecting smart Contract..........
+         const web3Modal = new Web3Modal();
+         const connection = await web3Modal.connect();
+         const provider = new ethers.providers.Web3Provider(connection);
+         const signer = provider.getSigner();
+         const contract = fetchContract(signer);
+         const voteredList = await contract.vote();
+         console.log(voteredList);
+         
       }catch(error){
          console.log(error);
       }

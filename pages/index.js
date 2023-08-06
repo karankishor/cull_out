@@ -18,11 +18,13 @@ const index = () => {
     currentAccount,  
     checkIfWalletIsConnected,  
     candidateLength,
-    voterLength
+    voterLength,
+    getAllVoterData,
   } = useContext(VotingContext)
 
   useEffect(()=>{
     checkIfWalletIsConnected();
+    getAllVoterData();
   })
   return (
     <div className={Style.home}>{currentAccount && (

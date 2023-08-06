@@ -30,7 +30,7 @@ const card = ({candidateArray, giveVote}) => {
           </div>
 
           <div className={Style.card_button}>
-            <button onClick={()=> giveVote({id: el[3].toNumber(), address: el[6]})}>Give Vote</button>
+            <button onClick={()=> giveVote({id: el[2].toNumber(), address: el[6]})}>Give Vote</button>
           </div>
         </div>
       ))}

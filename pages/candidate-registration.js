@@ -21,7 +21,7 @@ const candidateRegistration = () => {
   });
 
   const router = useRouter();
-  const { setCandidate, uploadToIPFSCandidate, candiateArray, getNewCandidate  } = useContext(VotingContext);
+  const { setCandidate, uploadToIPFSCandidate, candidateArray, getNewCandidate  } = useContext(VotingContext);
 
   ///.........Voters Image Drop
 
@@ -72,7 +72,7 @@ const candidateRegistration = () => {
               </p>
             </div>
             <div className={Style.card}>
-              {candiateArray.map((el,i)=> (
+              {candidateArray.map((el,i)=> (
                   <div key={i + 1} className={Style.card_box}>
                     <div className={Style.image}>
                       <img src={el[3]} alt="Profile Photo" />
@@ -116,18 +116,18 @@ const candidateRegistration = () => {
       <div className={Style.input__container}>
         <Input inputType="text"
           title="Name"
-          placeholder="Voter Name"
+          placeholder="Candidate Name"
           handleClick={(e) =>
             setcandidateForm({ ...candidateForm, name: e.target.value })} />
         <Input
           inputType="text"
           title="Address"
-          placeholder="Voter Address"
+          placeholder="Candidate Address"
           handleClick={(e) =>
             setcandidateForm({ ...candidateForm, address: e.target.value })} />
         <Input inputType="text"
           title="Position"
-          placeholder="Voter Position"
+          placeholder="Position"
           handleClick={(e) =>
             setcandidateForm({ ...candidateForm, age: e.target.value })} />
 

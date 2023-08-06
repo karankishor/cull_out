@@ -22,7 +22,7 @@ const Navbar = () => {
   }
   return (
     <div className={Style.navbar}>
-      {error === "" ? (
+      {/* {error === "" ? (
         ""
       ) : (
         <div className={Style.message__box}>
@@ -30,7 +30,8 @@ const Navbar = () => {
             <p>{error}</p>
           </div>
         </div>
-      )}
+      )
+    }; */}
       <div className={Style.navbar_box}>
         <div className={Style.title}>
           <Link href={{ pathname: '/' }}>
@@ -60,13 +61,16 @@ const Navbar = () => {
                   openNav && (
                     <div className={Style.navigation}>
                       <p>
-                        <Link href={{pathnamw: "/"}}>Home</Link>
+                        <Link href={{pathname: "/"}}>Home</Link>
                       </p>
                       <p>
-                        <Link href={{pathnamw: "candidate-registration"}}>Candidate Registration</Link>
+                        <Link href={{pathname: "candidate-registration"}}>Candidate Registration</Link>
                       </p>
                       <p>
-                        <Link href={{pathnamw: "allowed-voters"}}>Voter Registration</Link>
+                        <Link href={{pathname: "allowed-voters"}}>Voter Registration</Link>
+                      </p>
+                      <p>
+                        <Link href={{pathname: "voterList"}}>Voter List</Link>
                       </p>
                       </div>
                   )
